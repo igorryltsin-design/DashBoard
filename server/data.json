@@ -1,0 +1,494 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "role": "admin",
+      "passwordHash": "$2a$10$vQhLsHFxWuW2KwGcUArvJOUzmol9xTeMfm6I6oICXPjek1mqWZR5O"
+    },
+    {
+      "id": "2",
+      "username": "operator",
+      "role": "operator",
+      "passwordHash": "$2a$10$HuGmHE/W8MawrFT66MGa/elCbJBUgWlEeD0fbAL.3yVzkIqCi/GPO"
+    },
+    {
+      "id": "3",
+      "username": "viewer",
+      "role": "viewer",
+      "passwordHash": "$2a$10$QkC6GCJUTPtScTFKQd0RjuYGB3c29th2.Oi9EZzQVbTDtPNMig/8i"
+    }
+  ],
+  "apps": [
+    {
+      "id": "1757786353979",
+      "name": "Agregator",
+      "icon": "Container",
+      "type": "flask",
+      "status": "stopped",
+      "startCommand": "bash \"/Users/macbook/Documents/GitHub/Agregator/start.sh\"",
+      "environment": "flask_catalog",
+      "order": 1,
+      "createdAt": "2025-09-13T17:59:13.979Z",
+      "updatedAt": "2025-09-14T17:52:32.818Z",
+      "cwd": "/Users/macbook/Documents/GitHub/Agregator",
+      "healthCheck": "http://localhost:5050",
+      "port": 5050,
+      "autoOpen": true
+    },
+    {
+      "id": "1757787736928",
+      "name": "Плагиатор",
+      "icon": "Brain",
+      "type": "react",
+      "status": "running",
+      "startCommand": "bash \"/Users/macbook/Documents/GitHub/AiWord/run.sh\"",
+      "stopCommand": "npm stop",
+      "cwd": "/Users/macbook/Documents/GitHub/AiWord",
+      "order": 2,
+      "createdAt": "2025-09-13T18:22:16.928Z",
+      "updatedAt": "2025-09-14T17:32:28.817Z",
+      "healthCheck": "http://localhost:5174",
+      "port": 5174,
+      "autoOpen": true
+    },
+    {
+      "id": "1757789716457",
+      "name": "Word",
+      "icon": "Monitor",
+      "type": "local",
+      "status": "stopped",
+      "startCommand": "open -a \"Microsoft Word\"",
+      "stopCommand": "osascript -e 'quit app \"Microsoft Word\"'",
+      "order": 2,
+      "createdAt": "2025-09-13T18:55:16.457Z",
+      "updatedAt": "2025-09-14T17:33:32.509Z"
+    },
+    {
+      "id": "1757874998098",
+      "name": "Dok",
+      "icon": "Monitor",
+      "type": "docker",
+      "status": "stopped",
+      "startCommand": "",
+      "healthCheck": "http://localhost:5050",
+      "dockerImage": "sharp_matsumoto",
+      "dockerPorts": [
+        "5050:5050"
+      ],
+      "port": 5050,
+      "order": 4,
+      "createdAt": "2025-09-14T18:36:38.097Z",
+      "updatedAt": "2025-09-14T18:54:40.115Z",
+      "cwd": "/Users/macbook/Documents/GitHub/Agregator",
+      "autoOpen": true
+    }
+  ],
+  "operations": [
+    {
+      "id": "1757872395160",
+      "appId": "1757871501692",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:53:15.160Z",
+      "success": true
+    },
+    {
+      "id": "1757872352818",
+      "appId": "1757786353979",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:52:32.818Z",
+      "success": true
+    },
+    {
+      "id": "1757872310600",
+      "appId": "1757871501692",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:51:50.600Z",
+      "success": true
+    },
+    {
+      "id": "1757871242108",
+      "appId": "1757786353979",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:34:02.108Z",
+      "success": true
+    },
+    {
+      "id": "1757871212509",
+      "appId": "1757789716457",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:33:32.509Z",
+      "success": true
+    },
+    {
+      "id": "1757871207464",
+      "appId": "1757789716457",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:33:27.464Z",
+      "success": true
+    },
+    {
+      "id": "1757871202073",
+      "appId": "1757789716457",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:33:22.073Z",
+      "success": true
+    },
+    {
+      "id": "1757871195010",
+      "appId": "1757789716457",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:33:15.010Z",
+      "success": true
+    },
+    {
+      "id": "1757871148817",
+      "appId": "1757787736928",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:32:28.817Z",
+      "success": true
+    },
+    {
+      "id": "1757871140745",
+      "appId": "1757787736928",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:32:20.745Z",
+      "success": true
+    },
+    {
+      "id": "1757871127388",
+      "appId": "1757786353979",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:32:07.388Z",
+      "success": true
+    },
+    {
+      "id": "1757870844718",
+      "appId": "1757786353979",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:27:24.718Z",
+      "success": true
+    },
+    {
+      "id": "1757870470304",
+      "appId": "1757786353979",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:21:10.304Z",
+      "success": true
+    },
+    {
+      "id": "1757869696403",
+      "appId": "1757787736928",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:08:16.403Z",
+      "success": true
+    },
+    {
+      "id": "1757869534203",
+      "appId": "1757787736928",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:05:34.203Z",
+      "success": true
+    },
+    {
+      "id": "1757869520148",
+      "appId": "1757787736928",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:05:20.148Z",
+      "success": true
+    },
+    {
+      "id": "1757869385797",
+      "appId": "1757787736928",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:03:05.797Z",
+      "success": true
+    },
+    {
+      "id": "1757869371615",
+      "appId": "1757787736928",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:02:51.615Z",
+      "success": true
+    },
+    {
+      "id": "1757869332214",
+      "appId": "1757787736928",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:02:12.214Z",
+      "success": true
+    },
+    {
+      "id": "1757869316759",
+      "appId": "1757787736928",
+      "operation": "restart",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:01:56.759Z",
+      "success": true
+    },
+    {
+      "id": "1757869220765",
+      "appId": "1757786353979",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-14T17:00:20.765Z",
+      "success": true
+    },
+    {
+      "id": "1757790759743",
+      "appId": "1757786353979",
+      "operation": "restart",
+      "user": "admin",
+      "timestamp": "2025-09-13T19:12:39.743Z",
+      "success": true
+    },
+    {
+      "id": "1757790692374",
+      "appId": "1757786353979",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T19:11:32.374Z",
+      "success": true
+    },
+    {
+      "id": "1757790182341",
+      "appId": "1757786353979",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-13T19:03:02.341Z",
+      "success": true
+    },
+    {
+      "id": "1757790162376",
+      "appId": "1757786353979",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T19:02:42.376Z",
+      "success": true
+    },
+    {
+      "id": "1757789935859",
+      "appId": "1757789716457",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:58:55.859Z",
+      "success": true
+    },
+    {
+      "id": "1757789924093",
+      "appId": "1757787736928",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:58:44.093Z",
+      "success": true
+    },
+    {
+      "id": "1757789889383",
+      "appId": "1757786353979",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:58:09.383Z",
+      "success": true
+    },
+    {
+      "id": "1757789862600",
+      "appId": "1757786353979",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:57:42.600Z",
+      "success": true
+    },
+    {
+      "id": "1757789807775",
+      "appId": "1757786353979",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:56:47.775Z",
+      "success": true
+    },
+    {
+      "id": "1757789783661",
+      "appId": "1757786353979",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:56:23.661Z",
+      "success": true
+    },
+    {
+      "id": "1757789743913",
+      "appId": "1757789716457",
+      "operation": "restart",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:55:43.913Z",
+      "success": true
+    },
+    {
+      "id": "1757789725045",
+      "appId": "1757789716457",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:55:25.045Z",
+      "success": true
+    },
+    {
+      "id": "1757789159214",
+      "appId": "1757786353979",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:45:59.214Z",
+      "success": true
+    },
+    {
+      "id": "1757789130371",
+      "appId": "1757786353979",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:45:30.371Z",
+      "success": true
+    },
+    {
+      "id": "1757789069984",
+      "appId": "1757786353979",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:44:29.984Z",
+      "success": true
+    },
+    {
+      "id": "1757788899022",
+      "appId": "1757786353979",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:41:39.022Z",
+      "success": true
+    },
+    {
+      "id": "1757788891152",
+      "appId": "1757786353979",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:41:31.152Z",
+      "success": true
+    },
+    {
+      "id": "1757788748702",
+      "appId": "1757788737388",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:39:08.702Z",
+      "success": true
+    },
+    {
+      "id": "1757788395991",
+      "appId": "1757786353979",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:33:15.991Z",
+      "success": true
+    },
+    {
+      "id": "1757788388328",
+      "appId": "1757786353979",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:33:08.328Z",
+      "success": true
+    },
+    {
+      "id": "1757788266624",
+      "appId": "1757786353979",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:31:06.624Z",
+      "success": true
+    },
+    {
+      "id": "1757788258087",
+      "appId": "1757786353979",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:30:58.087Z",
+      "success": true
+    },
+    {
+      "id": "1757788081108",
+      "appId": "1757787736928",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:28:01.108Z",
+      "success": true
+    },
+    {
+      "id": "1757788072494",
+      "appId": "1757787736928",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:27:52.494Z",
+      "success": true
+    },
+    {
+      "id": "1757787861688",
+      "appId": "1757787736928",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:24:21.688Z",
+      "success": true
+    },
+    {
+      "id": "1757787853283",
+      "appId": "1757787736928",
+      "operation": "stop",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:24:13.283Z",
+      "success": true
+    },
+    {
+      "id": "1757787751839",
+      "appId": "1757787736928",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:22:31.839Z",
+      "success": true
+    },
+    {
+      "id": "1757787511516",
+      "appId": "1757786353979",
+      "operation": "start",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:18:31.516Z",
+      "success": true
+    },
+    {
+      "id": "1757786931510",
+      "appId": "1757786418213",
+      "operation": "restart",
+      "user": "admin",
+      "timestamp": "2025-09-13T18:08:51.510Z",
+      "success": true
+    }
+  ],
+  "settings": {
+    "theme": "light",
+    "autoRefresh": true,
+    "refreshInterval": 5000
+  }
+}
